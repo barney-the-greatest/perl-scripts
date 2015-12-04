@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+#mashup of short script utils
+
+#timestamping math 
+($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst)=localtime(time);
+$timestamp = ($year + 1900) . "-" . ($mon+1) . "-$mday" . "_$hour-$min-$sec";
+
+#user request (yes/no)
+print"some bullshit request(Y/N)\n";
+my $input = <STDIN>;
+if($input !~ m/^[yY](?:es)*$/){exit 0;}
+
