@@ -11,3 +11,13 @@ print"some bullshit request(Y/N)\n";
 my $input = <STDIN>;
 if($input !~ m/^[yY](?:es)*$/){exit 0;}
 
+#loop to read in and write to array 
+#!/usr/bin/perl -w
+$_ = undef;
+$fh = "/file/location/here";
+open(FH, "< $fh") or die "File: $fh wont open $!\n";
+my @contents
+while (<FH>){
+  push (@contents, $_);
+  print (@contents);
+  }
